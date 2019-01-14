@@ -1,6 +1,13 @@
 
 
-var n=Math.floor(prompt("Enter number of queen"));
+var n=prompt("Enter number of queen");
+
+if(typeof(n)=="number"){
+n=Math.floor(n);
+}
+else{
+n=Math.floor(Math.random()*10);
+}
 
 var animate = /*window.requestAnimationFrame ||
 window.webkitRequestAnimationFrame ||
