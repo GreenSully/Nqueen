@@ -14,6 +14,7 @@ var canvas=document.createElement ("canvas");
 var ctx;
 ctx=canvas.getContext("2d");
 
+var contatore=0;
 var dim=25;
 
 var width=dim*n;
@@ -22,17 +23,19 @@ canvas.width=width;
 canvas.height=height;
 
 var griglia=init();
-
+var finito=false;
 
 
 var step = function(){
 	ctx.fillStyle="#00ff00";
 	ctx.fillRect(0,0,width,height);
 drawGrid(griglia);
-	
-	for(var i=0;i<n*n*n;i++){
-		nextStep(griglia);
+	if(!finito){
+		for(var i=0;i<n*n*n;i++){
+			nextStep(griglia);
+		}
 	}
+	
 	
 	
 	
@@ -50,10 +53,12 @@ function init(){
 }
 
 function nextStep(){
+	finito=true;
 	for(var i=0;i<n;i++){
 		if(verifica(i)){
+			finito=false;
 			griglia[i]++;
-			
+			contatore++;
 		//drawGrid(griglia);
 		i--;
 			continue;
