@@ -30,7 +30,7 @@ var step = function(){
 	ctx.fillRect(0,0,width,height);
 drawGrid(griglia);
 	
-	for(var i=0;i<n*n;i++){
+	for(var i=0;i<n*n*n;i++){
 		nextStep(griglia);
 	}
 	
