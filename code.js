@@ -33,7 +33,7 @@ var griglia=init();
 
 
 var step = function(){
-	ctx.fillStyle="#000000";
+	ctx.fillStyle="#00ff00";
 	ctx.fillRect(0,0,width,height);
 drawGrid(griglia);
 	
