@@ -1,6 +1,6 @@
 
 
-var n=prompt("Enter number of queen");
+var n=Math.floor(prompt("Enter number of queen"));
 
 var animate = /*window.requestAnimationFrame ||
 window.webkitRequestAnimationFrame ||
