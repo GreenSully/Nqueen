@@ -35,6 +35,10 @@ drawGrid(griglia);
 			nextStep(griglia);
 		}
 	}
+	else{
+	alert("numero iterazioni "+contatore);
+		return;
+	}
 	
 	
 	
