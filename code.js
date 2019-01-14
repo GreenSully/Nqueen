@@ -41,10 +41,6 @@ drawGrid(griglia);
 	}
 	
 	
-	
-	
-	drawGrid(griglia);
-	
 animate(step);
 };
 
@@ -68,6 +64,7 @@ function nextStep(){
 			continue;
 		}
 		if(griglia[i]>=n){
+			finito=false;
 			griglia[i]=0;
 			griglia[i-1]++;
 			return;
